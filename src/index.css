@@ -1,28 +1,25 @@
-@tailwind utilities;
 @import "tailwindcss";
 
 @theme {
-  /* Colors */
   --color-primary: #c0e1d2;
+  --color-primary-hover: #9fc9b6;
+  --color-primary-active: #94bdaa;
   --color-secondary: #e5eee4;
   --color-offwhite: #f6f4e8;
   --color-warning-red: #dc9b9b;
   --color-kompass-black: #2b2b2b;
-
-  /* Fonts */
   --font-fraunces: "Fraunces", serif;
   --font-lexend: "Lexend", sans-serif;
   --font-inter: "Inter", sans-serif;
 }
 
-/* Base typography setup for responsive scaling */
+/* Base typography setup */
 @layer base {
   body {
     font-family: var(--font-lexend);
     background-color: var(--color-primary);
     color: var(--color-kompass-black);
   }
-
   h1,
   h2,
   h3,
@@ -31,10 +28,13 @@
   h6 {
     font-family: var(--font-fraunces);
   }
+}
 
+/* Heading sizes in components layer to override Tailwind preflight */
+@layer components {
   /* Mobile sizes (375px) */
   h1 {
-    font-size: 48px;
+    font-size: 30px;
     line-height: 1.2;
     font-weight: 700;
   }
@@ -61,7 +61,7 @@
   /* Tablet sizes (768px) */
   @media (min-width: 768px) {
     h1 {
-      font-size: 36px;
+      font-size: 48px;
     }
     h2 {
       font-size: 28px;
@@ -71,7 +71,7 @@
     }
   }
 
-  /* Desktop sizes (1440px) */
+  /* Desktop sizes (1024px) */
   @media (min-width: 1024px) {
     h1 {
       font-size: 48px;
@@ -88,19 +88,45 @@
       font-weight: 300;
     }
   }
-}
 
-/* Button components */
-@layer components {
+  /* Primary button */
   .btn-primary {
-    @apply bg-primary text-kompass-black px-6 py-2 rounded-md font-medium transition-colors duration-200;
+    @apply px-6 py-2 rounded-md font-medium transition-all duration-200;
+    background-color: var(--color-primary);
+    color: var(--color-kompass-black);
+    &:hover {
+      background-color: var(--color-primary-hover);
+    }
+    &:active {
+      background-color: var(--color-primary-active);
+    }
+    &:focus {
+      @apply outline-dashed outline-2 outline-offset-2;
+      outline-color: var(--color-kompass-black);
+    }
   }
 
+  /* Warning button */
   .btn-warning {
-    @apply bg-warning-red text-white px-6 py-2 rounded-md font-medium transition-colors duration-200;
+    @apply px-6 py-2 rounded-md font-medium transition-all duration-200;
+    background-color: var(--color-warning-red);
+    color: var(--color-kompass-black);
+    &:hover {
+      @apply brightness-95;
+    }
+    &:active {
+      @apply brightness-90;
+    }
+    &:focus {
+      @apply outline-dashed outline-2 outline-offset-2;
+      outline-color: var(--color-warning-red);
+    }
   }
 
+  /* Disabled button */
   .btn-disabled {
-    @apply bg-secondary text-gray-400 px-6 py-2 rounded-md font-medium cursor-not-allowed;
+    @apply px-6 py-2 rounded-md font-medium cursor-not-allowed pointer-events-none;
+    background-color: var(--color-secondary);
+    color: #9ca3af;
   }
 }
