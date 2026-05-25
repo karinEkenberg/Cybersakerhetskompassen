@@ -1,16 +1,29 @@
-# React + Vite
+# Cybersäkerhetskompassen
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Overview**
+Cybersäkerhetskompassen is a platform designed to help IT security students and juniors navigate the cybersecurity industry. It clarifies industry jargon, maps out different career paths, and provides practical guidance for entering the field.
 
-Currently, two official plugins are available:
+**Planned Features**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Roles:** Detailed descriptions of various cybersecurity professions.
+* **Roadmaps:** Guides and paths.
+* **Cyber Lexicon:** A student-friendly dictionary explaining industry terms and acronyms.
+* **Matchmaking Tool:** An interactive feature to map personal skills to the right niche within the security field.
+* **Labs & Portfolio:** Guides for setting up lab environments and tips on how to present projects to employers.
+* **Network:** A directory of relevant companies and industry initiatives.
 
-## React Compiler
+**Tech Stack**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Frontend:** React configured with Vite.
+* **Styling:** Tailwind CSS (v4).
+* **Content Management:** Sanity (Headless CMS).
+* **Hosting:** Vercel.
 
-## Expanding the ESLint configuration
+**Local Development**
+To run this project locally, clone the repository and execute the following commands in your terminal:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+
+```
