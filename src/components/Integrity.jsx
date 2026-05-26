@@ -4,7 +4,7 @@ import React from "react";
 const Integrity = () => {
   return (
     // Vi lägger till pt-24 (padding top) så att texten inte krockar med toppen av skärmen
-    <section className="max-w-3xl mx-auto px-6 pt-24 pb-16">
+    <section className="max-w-3xl mx-auto px-6 pt-24 pb-16 mt-12">
       <h1 className="mb-8 text-kompass-black">Integritet & Grön kod</h1>
 
       <div className="flex flex-col gap-6 text-gray-800">

@@ -6,7 +6,7 @@ const Hero = () => {
     // Full-width section holding the background color
     <section className="w-full bg-(--color-offwhite) relative z-0 mb-12">
       {/* Inner wrapper constrains content width and centers it */}
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 py-12 lg:py-24">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 pt-32 pb-12 lg:pt-24 lg:pb-24">
         {/* Text and buttons */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left mt-10 lg:mt-0 lg:w-1/2">
           <h1 className="mb-4">

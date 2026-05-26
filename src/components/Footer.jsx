@@ -49,7 +49,7 @@ const Footer = () => {
                 href="/integritet"
                 className="hover:underline text-sm md:text-base"
               >
-                Integritet & cookies
+                Integritet & Grönt
               </a>
               <a href="#" className="hover:underline text-sm md:text-base">
                 Kontakta oss
