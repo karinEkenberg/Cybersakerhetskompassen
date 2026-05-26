@@ -45,7 +45,10 @@ const Footer = () => {
               <a href="#" className="hover:underline text-sm md:text-base">
                 Vilka är vi?
               </a>
-              <a href="#" className="hover:underline text-sm md:text-base">
+              <a
+                href="/integritet"
+                className="hover:underline text-sm md:text-base"
+              >
                 Integritet & cookies
               </a>
               <a href="#" className="hover:underline text-sm md:text-base">
