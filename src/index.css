@@ -94,11 +94,15 @@
     @apply px-6 py-2 rounded-md font-medium transition-all duration-200;
     background-color: var(--color-primary);
     color: var(--color-kompass-black);
+    box-shadow: 4px 4px 0px rgba(43, 43, 43, 0.2);
+
     &:hover {
       background-color: var(--color-primary-hover);
     }
     &:active {
       background-color: var(--color-primary-active);
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px rgba(43, 43, 43, 0.2);
     }
     &:focus {
       @apply outline-dashed outline-2 outline-offset-2;
@@ -111,11 +115,15 @@
     @apply px-6 py-2 rounded-md font-medium transition-all duration-200;
     background-color: var(--color-warning-red);
     color: var(--color-kompass-black);
+    box-shadow: 4px 4px 0px rgba(43, 43, 43, 0.2);
+
     &:hover {
       @apply brightness-95;
     }
     &:active {
       @apply brightness-90;
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px rgba(43, 43, 43, 0.2);
     }
     &:focus {
       @apply outline-dashed outline-2 outline-offset-2;

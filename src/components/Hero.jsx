@@ -4,7 +4,7 @@ import React from "react";
 const Hero = () => {
   return (
     // Full-width section holding the background color
-    <section className="w-full bg-(--color-offwhite) relative z-0 mb-12">
+    <section className="w-full bg-(--color-offwhite) relative z-0 mb-12 shadow-md">
       {/* Inner wrapper constrains content width and centers it */}
       <div className="flex flex-col-reverse lg:flex-row items-center justify-between max-w-7xl mx-auto px-6 pt-32 pb-12 lg:pt-24 lg:pb-24">
         {/* Text and buttons */}
