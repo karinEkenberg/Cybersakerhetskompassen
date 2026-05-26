@@ -1,24 +1,28 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Nav from "./components/Nav"; // Importera Naven
-import Hero from "./components/Hero";
+import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import Home from "./components/Home"; // New import for the home page wrapper
 import Integrity from "./components/Integrity";
 
 function App() {
   return (
     <Router>
       <main className="min-h-screen flex flex-col relative">
-        {" "}
-        {/* La till relative här för säkerhets skull */}
-        {/* Naven ligger högst upp och syns alltid */}
+        {/* Navigation bar stays at the top of every page */}
         <Nav />
+
         <div className="flex-grow">
           <Routes>
-            <Route path="/" element={<Hero />} />
+            {/* The main root path now loads the Home component */}
+            <Route path="/" element={<Home />} />
+
+            {/* Privacy policy and green coding statements */}
             <Route path="/integritet" element={<Integrity />} />
           </Routes>
         </div>
+
+        {/* Footer stays at the bottom of every page */}
         <Footer />
       </main>
     </Router>
