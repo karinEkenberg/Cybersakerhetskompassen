@@ -9,7 +9,7 @@ const Home = () => {
       {/* You can easily inject more sections for the landing page here later, like an About or Feature section */}
       <Section
         title="För studenter av studenter"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sidan anpassar sig och fyller i denna text dynamiskt via props."
+        text="Idén till Cybersäkerhetskompassen föddes ur vår egen förvirring i början av utbildningen. Det saknades en tydlig bild av vilka inriktningar som faktiskt finns – och ju längre in i studierna vi kommer, desto fler dörrar upptäcker vi öppnas. Även om det självklart är bra att ha en bred grundkunskap, vill vi underlätta ingången i branschen för andra. Vi vill hjälpa studenter att navigera rätt tidigt, så att dyrbar tid kan läggas där den gör mest nytta. Vi har helt enkelt byggt den sajt vi själva hade önskat fanns när vi började."
         buttonText="Läs mer"
         buttonStyle="btn-primary"
         imageSrc="./src/assets/students-working.webp"
@@ -66,6 +66,16 @@ const Home = () => {
         buttonStyle="btn-primary"
         imageSrc="./src/assets/handshake.webp"
         imageAlt="Two corporate professionals shaking hands"
+      />
+      {/* Section 6: Certificates vs Practical Projects */}
+      <Section
+        title="Certifikat eller praktiska projekt?"
+        text="Många undrar om dyra certifikat är ett krav för att få första jobbet inom cybersäkerhet. Efter att ha lyssnat på branschen i Sverige är budskapet tydligt: certifikat skadar absolut inte och kan ge fördelar, men det väger sällan lika tungt som praktisk kunskap. Dessutom är det standard att arbetsgivaren betalar för certifieringar väl på plats. Vi uppmuntrar därför inte studenter att lägga tusenlappar ur egen ficka. Satsa hellre på att bygga egna projekt och labbar att visa upp i en portfolio."
+        buttonText="Se våra labbar"
+        buttonStyle="btn-primary"
+        imageSrc="./src/assets/certificates-illustration.webp"
+        imageAlt="Illustration showing alternative career building over expensive certificates"
+        reverse={true}
       />
     </>
   );
