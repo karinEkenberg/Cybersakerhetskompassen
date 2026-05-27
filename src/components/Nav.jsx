@@ -22,7 +22,7 @@ const Nav = () => {
         {/* Logo - Keeps using regular Link since it should not have an active underline */}
         <Link to="/" className="flex items-center gap-2 z-50">
           <img
-            src="./src/assets/compass-image.png"
+            src="./src/assets/compass-image.webp"
             alt="Cybersäkerhetskompassen"
             className="w-12 md:w-16 object-contain"
           />
