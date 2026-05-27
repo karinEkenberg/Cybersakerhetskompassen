@@ -28,6 +28,7 @@ const Hero = () => {
             src="./src/assets/compass-image.png"
             alt="3D compass for cybersecurity"
             className="w-32 lg:w-[450px] object-contain"
+            fetchPriority="high"
           />
         </div>
       </div>

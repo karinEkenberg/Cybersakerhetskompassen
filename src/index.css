@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+/* src/index.css */
+
+/* Fraunces */
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  /* Updated path to go through the Fraunces subfolder */
+  src: url("/fonts/Fraunces/fraunces-v38-regular.woff2") format("woff2");
+}
+
+/* Lexend */
+@font-face {
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  /* Updated path to go through the Lexend subfolder */
+  src: url("/fonts/Lexend/lexend-v26-regular.woff2") format("woff2");
+}
+
 @theme {
   --color-primary: #c0e1d2;
   --color-primary-hover: #9fc9b6;
