@@ -1,13 +1,12 @@
 // src/components/Integrity.jsx
 import React from "react";
+import Section from "./Section";
 
 const Integrity = () => {
   return (
-    // Vi lägger till pt-24 (padding top) så att texten inte krockar med toppen av skärmen
-    <section className="max-w-3xl mx-auto px-6 pt-24 pb-16 mt-12">
-      <h1 className="mb-8 text-kompass-black">Integritet & Grön kod</h1>
-
-      <div className="flex flex-col gap-6 text-gray-800">
+    <Section title="Integritet & Grön kod" isSubpage={true}>
+      {/* Everything inside here becomes the 'children' prop inside Section.jsx */}
+      <div className="flex flex-col gap-6 text-gray-800 w-full">
         <p>
           På Cybersäkerhetskompassen tar vi både digital och miljömässig
           hållbarhet på största allvar. Därför gör vi saker lite annorlunda:
@@ -38,7 +37,7 @@ const Integrity = () => {
           hos dig.
         </p>
       </div>
-    </section>
+    </Section>
   );
 };
 

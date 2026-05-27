@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Home from "./components/Home"; // New import for the home page wrapper
 import Integrity from "./components/Integrity";
+import Error from "./components/Error";
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
           <Routes>
             {/* The main root path now loads the Home component */}
             <Route path="/" element={<Home />} />
-
             {/* Privacy policy and green coding statements */}
             <Route path="/integritet" element={<Integrity />} />
+            <Route path="*" element={<Error />} />{" "}
+            {/* Catch-all route for undefined paths */}
           </Routes>
         </div>
 
