@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="flex justify-center md:justify-start w-full md:w-auto">
           {/* Sätt in din kompassbild här. Byt src mot rätt sökväg. */}
           <img
-            src="./src/assets/compass-image.png"
+            src="./src/assets/compass-image.webp"
             alt="Cybersäkerhetskompassen Logotyp"
             className="w-32 md:w-48 object-contain"
           />

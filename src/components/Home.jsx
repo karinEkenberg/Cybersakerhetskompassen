@@ -14,6 +14,7 @@ const Home = () => {
         buttonStyle="btn-primary"
         imageSrc="./src/assets/students-working.webp"
         imageAlt="Students collaborating on projects"
+        reverse={true}
       />
       {/* Section 1: Roles & Roadmaps */}
       <Section
