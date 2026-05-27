@@ -25,7 +25,7 @@ const Hero = () => {
         {/* Image */}
         <div className="lg:w-1/2 flex justify-center">
           <img
-            src="./src/assets/compass-image.png"
+            src="./src/assets/compass-image.webp"
             alt="3D compass for cybersecurity"
             className="w-32 lg:w-[450px] object-contain"
             fetchPriority="high"
