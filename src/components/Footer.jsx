@@ -42,7 +42,7 @@ const Footer = () => {
             {/* Kolumn 2 */}
             <div className="flex flex-col gap-2">
               <h3 className="font-semibold text-lg mb-2">Om plattformen</h3>
-              <a href="#" className="hover:underline text-sm md:text-base">
+              <a href="/om-oss" className="hover:underline text-sm md:text-base">
                 Vilka är vi?
               </a>
               <a
