@@ -29,7 +29,7 @@ const Section = ({
       >
         <div className="w-full flex flex-col items-start">
           {title && <h2 className="mb-6 text-kompass-black">{title}</h2>}
-          {text && <p className="text-gray-800 leading-relaxed mb-6">{text}</p>}
+          {text && <p className="leading-relaxed mb-6">{text}</p>}
 
           {children}
 
