@@ -6,6 +6,7 @@ import Home from "./components/Home"; // New import for the home page wrapper
 import Integrity from "./components/Integrity";
 import Error from "./components/Error";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             {/* Privacy policy and green coding statements */}
             <Route path="/integritet" element={<Integrity />} />
             <Route path="/om-oss" element={<About />} />
+            <Route path="/kontakta-oss" element={<Contact />} />
             <Route path="*" element={<Error />} />{" "}
             {/* Catch-all route for undefined paths */}
           </Routes>

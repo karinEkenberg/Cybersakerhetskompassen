@@ -1,3 +1,4 @@
+// src/components/Section.jsx
 import React from "react";
 
 const Section = ({
@@ -11,6 +12,8 @@ const Section = ({
   reverse = false,
   isSubpage = false,
   children,
+
+  buttonLink,
 }) => {
   return (
     <section
@@ -18,7 +21,6 @@ const Section = ({
         isSubpage ? "pt-32 lg:pt-40" : "pt-12 lg:pt-16"
       }`}
     >
-      {/* Removed the black border from the main card wrapper */}
       <div
         className={`max-w-5xl mx-auto bg-[var(--color-offwhite)] rounded-md p-6 md:p-10 lg:p-12
           flex flex-col lg:items-center justify-between gap-8 lg:gap-12
@@ -32,15 +34,32 @@ const Section = ({
           {children}
 
           {buttonText && (
-            <button className={`${buttonStyle} mt-6`} onClick={onButtonClick}>
-              {buttonText}
-            </button>
+            <>
+              {buttonLink ? (
+                <a
+                  href={buttonLink}
+                  className={`${buttonStyle} mt-6`}
+                  target={buttonLink.startsWith("http") ? "_blank" : "_self"}
+                  rel={
+                    buttonLink.startsWith("http") ? "noopener noreferrer" : ""
+                  }
+                >
+                  {buttonText}
+                </a>
+              ) : (
+                <button
+                  className={`${buttonStyle} mt-6`}
+                  onClick={onButtonClick}
+                >
+                  {buttonText}
+                </button>
+              )}
+            </>
           )}
         </div>
 
         {imageSrc && (
           <div className="w-full lg:w-1/2 flex justify-center">
-            {/* Removed the black border from the image element */}
             <img
               src={imageSrc}
               alt={imageAlt || "Section illustration"}
