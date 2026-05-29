@@ -18,8 +18,8 @@ const Contact = () => {
         buttonText="Karin på LinkedIn"
         buttonStyle="btn-primary"
         /* Replace with your actual LinkedIn URL */
-        buttonLink="https://www.linkedin.com/in/ditt-linkedin-namn"
-        imageSrc="./src/assets/karin-ny.webp"
+        buttonLink="https://www.linkedin.com/in/karin-ekenberg-webbutvecklare/"
+        imageSrc="./src/assets/karin-and-david.webp"
         imageAlt="Portrait of Karin"
       />
 
@@ -30,8 +30,8 @@ const Contact = () => {
         buttonText="David på LinkedIn"
         buttonStyle="btn-primary"
         /* Replace with his actual LinkedIn URL */
-        buttonLink="https://www.linkedin.com/in/davids-linkedin-namn"
-        imageSrc="./src/assets/david.webp"
+        buttonLink="https://www.linkedin.com/in/david-lindskog-098b10149/"
+        imageSrc="./src/assets/karin-and-david.webp"
         imageAlt="Portrait of David"
         /* Flips the layout so it zig-zags nicely! */
         reverse={true}
@@ -46,8 +46,8 @@ const Contact = () => {
         /* Triggers the default mail client on the user's device */
         buttonLink="mailto:hej@cybersakerhetskompassen.se"
         /* Reusing an existing image is a great green coding trick! */
-        imageSrc="./src/assets/compass-image.webp"
-        imageAlt="Cybersäkerhetskompassen logo"
+        imageSrc="./src/assets/mail.webp"
+        imageAlt="Illustration of an email app icon"
       />
     </div>
   );

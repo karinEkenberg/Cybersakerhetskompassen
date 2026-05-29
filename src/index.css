@@ -2,24 +2,26 @@
 
 /* src/index.css */
 
-/* Fraunces */
+/* Fraunces (Variable Font) */
 @font-face {
   font-family: "Fraunces";
   font-style: normal;
-  font-weight: 400 700;
+  /* Eftersom det är en variabel font stöder den alla tjocklekar! */
+  font-weight: 100 900;
   font-display: swap;
-  /* Updated path to go through the Fraunces subfolder */
-  src: url("/fonts/Fraunces/fraunces-v38-regular.woff2") format("woff2");
+  /* Exakt det filnamn som syns i din mapp */
+  src: url("/fonts/Fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf")
+    format("truetype");
 }
 
-/* Lexend */
+/* Lexend (Variable Font) */
 @font-face {
   font-family: "Lexend";
   font-style: normal;
-  font-weight: 300 600;
+  font-weight: 100 900;
   font-display: swap;
-  /* Updated path to go through the Lexend subfolder */
-  src: url("/fonts/Lexend/lexend-v26-regular.woff2") format("woff2");
+  /* Exakt det filnamn som syns i din mapp */
+  src: url("/fonts/Lexend/Lexend-VariableFont_wght.ttf") format("truetype");
 }
 
 @theme {
@@ -148,7 +150,6 @@
     &:active {
       @apply brightness-90;
       transform: translate(2px, 2px);
-      box-shadow: 1px 1px 0px rgba(43, 43, 43, 0.2);
     }
     &:focus {
       @apply outline-dashed outline-2 outline-offset-2;
