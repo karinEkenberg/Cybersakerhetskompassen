@@ -8,7 +8,6 @@ const Nav = () => {
     setIsOpen(!isOpen);
   };
 
-  // A helper function to avoid repeating the active styling logic
   const linkStyle = ({ isActive }) =>
     `hover:text-black pb-1 transition-all duration-100 ${
       isActive
@@ -19,7 +18,6 @@ const Nav = () => {
   return (
     <nav className="absolute top-0 left-0 w-full z-50 px-6 py-6 bg-[var(--color-offwhite)]">
       <div className="max-w-7xl mx-auto flex justify-between items-center relative">
-        {/* Logo - Keeps using regular Link since it should not have an active underline */}
         <Link to="/" className="flex items-center gap-2 z-50">
           <img
             src="./src/assets/compass-image.webp"
@@ -28,7 +26,6 @@ const Nav = () => {
           />
         </Link>
 
-        {/* Desktop menu */}
         <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 items-center font-medium">
           <NavLink to="/" className={linkStyle}>
             Hem
@@ -53,7 +50,6 @@ const Nav = () => {
           </NavLink>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={toggleMenu}
           className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none z-50"
@@ -71,7 +67,6 @@ const Nav = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={`md:hidden absolute top-0 left-0 w-full bg-[var(--color-offwhite)] shadow-lg transition-all duration-300 ease-in-out overflow-hidden flex flex-col items-center gap-6 pt-24 pb-8 ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
       >

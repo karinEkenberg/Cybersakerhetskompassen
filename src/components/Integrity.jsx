@@ -5,8 +5,7 @@ import Section from "./Section";
 const Integrity = () => {
   return (
     <Section title="Integritet & Grön kod" isSubpage={true}>
-      {/* Everything inside here becomes the 'children' prop inside Section.jsx */}
-      <div className="flex flex-col gap-6 text-gray-800 w-full">
+      <div className="flex flex-col gap-6 w-full">
         <p>
           På Cybersäkerhetskompassen tar vi både digital och miljömässig
           hållbarhet på största allvar. Därför gör vi saker lite annorlunda:

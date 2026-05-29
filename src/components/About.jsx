@@ -3,7 +3,6 @@ import Section from "./Section";
 
 const About = () => {
   return (
-    // Wrapping div to give the page a nice top margin if you have a fixed navbar
     <div className="pt-20 lg:pt-32">
       <Section
         title="Vilka är vi?"
