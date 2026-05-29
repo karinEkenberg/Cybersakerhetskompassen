@@ -1,26 +1,19 @@
 @import "tailwindcss";
 
-/* src/index.css */
-
-/* Fraunces (Variable Font) */
 @font-face {
   font-family: "Fraunces";
   font-style: normal;
-  /* Eftersom det är en variabel font stöder den alla tjocklekar! */
   font-weight: 100 900;
   font-display: swap;
-  /* Exakt det filnamn som syns i din mapp */
   src: url("/fonts/Fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf")
     format("truetype");
 }
 
-/* Lexend (Variable Font) */
 @font-face {
   font-family: "Lexend";
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  /* Exakt det filnamn som syns i din mapp */
   src: url("/fonts/Lexend/Lexend-VariableFont_wght.ttf") format("truetype");
 }
 
@@ -37,7 +30,6 @@
   --font-inter: "Inter", sans-serif;
 }
 
-/* Base typography setup */
 @layer base {
   body {
     font-family: var(--font-lexend);
@@ -54,7 +46,6 @@
   }
 }
 
-/* Heading sizes in components layer to override Tailwind preflight */
 @layer components {
   /* Mobile sizes (375px) */
   h1 {
@@ -82,7 +73,6 @@
     line-height: 1.4;
   }
 
-  /* Tablet sizes (768px) */
   @media (min-width: 768px) {
     h1 {
       font-size: 48px;
@@ -95,7 +85,6 @@
     }
   }
 
-  /* Desktop sizes (1024px) */
   @media (min-width: 1024px) {
     h1 {
       font-size: 48px;
@@ -113,7 +102,6 @@
     }
   }
 
-  /* Primary button */
   .btn-primary {
     @apply px-6 py-2 rounded-md font-medium transition-all duration-200;
     background-color: var(--color-primary);
@@ -136,7 +124,6 @@
     }
   }
 
-  /* Warning button */
   .btn-warning {
     @apply px-6 py-2 rounded-md font-medium transition-all duration-200;
     background-color: var(--color-warning-red);
@@ -157,7 +144,6 @@
     }
   }
 
-  /* Disabled button */
   .btn-disabled {
     @apply px-6 py-2 rounded-md font-medium cursor-not-allowed pointer-events-none;
     background-color: var(--color-secondary);
