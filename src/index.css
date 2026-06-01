@@ -106,9 +106,7 @@
     @apply px-6 py-2 rounded-md font-medium transition-all duration-200;
     background-color: var(--color-primary);
     color: var(--color-kompass-black);
-    box-shadow: 4px 4px 0px rgba(43, 43, 43, 0.2);
-    border: 1px solid rgba(75, 85, 99, 0.4);
-    box-shadow: 0px 0px 8px rgba(75, 85, 99, 0.2);
+    box-shadow: 6px 6px 0px rgba(43, 43, 43, 0.2);
 
     &:hover {
       background-color: var(--color-primary-hover);
@@ -128,8 +126,7 @@
     @apply px-6 py-2 rounded-md font-medium transition-all duration-200;
     background-color: var(--color-warning-red);
     color: var(--color-kompass-black);
-    border: 1px solid rgba(75, 85, 99, 0.4);
-    box-shadow: 0px 0px 8px rgba(75, 85, 99, 0.2);
+    box-shadow: 6px 6px 0px rgba(43, 43, 43, 0.2);
 
     &:hover {
       @apply brightness-95;
