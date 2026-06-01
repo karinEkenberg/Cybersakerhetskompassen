@@ -6,6 +6,7 @@ const About = () => {
   return (
     <div className="pt-20 lg:pt-32">
       <Section
+        headingLevel="h1"
         title="Vilka är vi?"
         imageSrc={KarinAndDavid}
         imageAlt="Karin and David, creators of Cybersäkerhetskompassen"

@@ -4,7 +4,7 @@ import Section from "./Section";
 
 const Integrity = () => {
   return (
-    <Section title="Integritet & Grön kod" isSubpage={true}>
+    <Section headingLevel="h1" title="Integritet & Grön kod" isSubpage={true}>
       <div className="flex flex-col gap-6 w-full">
         <p>
           På Cybersäkerhetskompassen tar vi både digital och miljömässig
