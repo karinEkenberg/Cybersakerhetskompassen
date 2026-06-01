@@ -1,5 +1,7 @@
 import React from "react";
 import Section from "./Section";
+import KarinAndDavid from "../assets/karin-and-david.webp";
+import Mail from "../assets/mail.webp";
 
 const Contact = () => {
   return (
@@ -17,7 +19,7 @@ const Contact = () => {
         buttonText="Karin på LinkedIn"
         buttonStyle="btn-primary"
         buttonLink="https://www.linkedin.com/in/karin-ekenberg-webbutvecklare/"
-        imageSrc="./src/assets/karin-and-david.webp"
+        imageSrc={KarinAndDavid}
         imageAlt="Portrait of Karin"
       />
 
@@ -27,7 +29,7 @@ const Contact = () => {
         buttonText="David på LinkedIn"
         buttonStyle="btn-primary"
         buttonLink="https://www.linkedin.com/in/david-lindskog-098b10149/"
-        imageSrc="./src/assets/karin-and-david.webp"
+        imageSrc={KarinAndDavid}
         imageAlt="Portrait of David"
         reverse={true}
       />
@@ -38,7 +40,7 @@ const Contact = () => {
         buttonText="Skicka e-post"
         buttonStyle="btn-warning"
         buttonLink="mailto:hej@cybersakerhetskompassen.se"
-        imageSrc="./src/assets/mail.webp"
+        imageSrc={Mail}
         imageAlt="Illustration of an email app icon"
       />
     </div>

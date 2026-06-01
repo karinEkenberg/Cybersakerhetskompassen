@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import Compass from "../assets/compass-image.webp";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ const Nav = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center relative">
         <Link to="/" className="flex items-center gap-2 z-50">
           <img
-            src="./src/assets/compass-image.webp"
+            src={Compass}
             alt="Cybersäkerhetskompassen"
             className="w-12 md:w-16 object-contain"
           />

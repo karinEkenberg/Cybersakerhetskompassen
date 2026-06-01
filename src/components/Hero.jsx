@@ -1,5 +1,6 @@
 // src/components/Hero.jsx
 import React from "react";
+import Compass from "../assets/compass-image.webp";
 
 const Hero = () => {
   return (
@@ -22,7 +23,7 @@ const Hero = () => {
 
         <div className="lg:w-1/2 flex justify-center lg:justify-end">
           <img
-            src="./src/assets/compass-image.webp"
+            src={Compass}
             alt="3D compass for cybersecurity"
             className="w-32 lg:w-[360px] object-contain"
             fetchPriority="high"

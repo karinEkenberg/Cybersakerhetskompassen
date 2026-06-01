@@ -1,4 +1,5 @@
 import React from "react";
+import Compass from "../assets/compass-image.webp";
 
 const Footer = () => {
   return (
@@ -6,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-10">
         <div className="flex justify-center md:justify-start w-full md:w-auto">
           <img
-            src="./src/assets/compass-image.webp"
+            src={Compass}
             alt="Cybersäkerhetskompassen Logotyp"
             className="w-32 md:w-48 object-contain"
           />
