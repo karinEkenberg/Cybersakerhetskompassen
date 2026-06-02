@@ -7,6 +7,7 @@ const About = React.lazy(() => import("./components/About"));
 const Contact = React.lazy(() => import("./components/Contact"));
 const Integrity = React.lazy(() => import("./components/Integrity"));
 const Error = React.lazy(() => import("./components/Error"));
+const Roles = React.lazy(() => import("./components/Roles"));
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/integritet" element={<Integrity />} />
             <Route path="/om-oss" element={<About />} />
             <Route path="/kontakta-oss" element={<Contact />} />
+            <Route path="/roller" element={<Roles />} />
             <Route path="*" element={<Error />} />{" "}
           </Routes>
         </div>

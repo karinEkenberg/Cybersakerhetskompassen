@@ -27,6 +27,7 @@ const Home = () => {
         text="Säkerhetsbranschen är bred och det kan vara svårt att veta vilken dörr en ska knacka på. Här kartläggs olika specialistroller – från defensiv incidenthantering i ett SOC-team till offensiv sårbarhetsanalys och pentest. Hitta den roadmap som passar dina mål bäst."
         buttonText="Utforska roller"
         buttonStyle="btn-primary"
+        buttonLink="/roller"
         imageSrc={Ladder}
         imageAlt="Visual map or compass showing digital career paths"
       />

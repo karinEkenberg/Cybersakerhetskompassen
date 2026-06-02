@@ -1,5 +1,5 @@
-// src/components/Section.jsx
 import React from "react";
+import { PortableText } from "@portabletext/react";
 
 const Section = ({
   title,
@@ -10,19 +10,15 @@ const Section = ({
   imageSrc,
   imageAlt,
   reverse = false,
-  isSubpage = false,
   children,
   buttonLink,
-  headingLevel = "h2", // Default to h2 for backward compatibility
+  headingLevel = "h2", 
 }) => {
-  // React requires dynamic element tags to be capitalized
   const HeadingTag = headingLevel;
 
   return (
     <section
-      className={`w-full bg-[#c0e1d2] px-6 pb-12 lg:pb-20 ${
-        isSubpage ? "pt-32 lg:pt-40" : "pt-12 lg:pt-16"
-      }`}
+      className="w-full bg-[#c0e1d2] px-6 py-8 lg:py-12 first-of-type:pt-16 lg:first-of-type:pt-24 last-of-type:pb-16 lg:last-of-type:pb-24"
     >
       <div
         className={`max-w-5xl mx-auto bg-[var(--color-offwhite)] rounded-md p-6 md:p-10 lg:p-12 flex flex-col lg:items-center justify-between gap-8 lg:gap-12 ${
@@ -31,11 +27,33 @@ const Section = ({
         style={{ boxShadow: "6px 6px 0px rgba(43, 43, 43, 0.2)" }}
       >
         <div className="w-full flex flex-col items-start">
-          {/* Dynamically render the heading tag */}
           {title && (
             <HeadingTag className="mb-6 text-kompass-black">{title}</HeadingTag>
           )}
-          {text && <p className="leading-relaxed mb-6">{text}</p>}
+
+          {text && (
+            <div className="mb-6 w-full text-gray-800">
+              {typeof text === "string" ? (
+                <p className="leading-relaxed">{text}</p>
+              ) : (
+                <PortableText
+                  value={text}
+                  components={{
+                    block: {
+                      h3: ({ children }) => (
+                        <h3 className="text-xl font-bold mt-6 mb-2 text-kompass-black">
+                          {children}
+                        </h3>
+                      ),
+                      normal: ({ children }) => (
+                        <p className="leading-relaxed mb-4">{children}</p>
+                      ),
+                    },
+                  }}
+                />
+              )}
+            </div>
+          )}
 
           {children}
 

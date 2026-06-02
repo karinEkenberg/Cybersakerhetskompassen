@@ -17,7 +17,8 @@ const Nav = () => {
     }`;
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50 px-6 py-6 bg-[var(--color-offwhite)]">
+    // ÄNDRING HÄR: absolute -> sticky
+    <nav className="sticky top-0 left-0 w-full z-50 px-6 py-6 bg-[var(--color-offwhite)]">
       <div className="max-w-7xl mx-auto flex justify-between items-center relative">
         <Link to="/" className="flex items-center gap-2 z-50">
           <img
@@ -28,6 +29,7 @@ const Nav = () => {
         </Link>
 
         <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 items-center font-medium">
+          {/* ... alla dina NavLinks är oförändrade ... */}
           <NavLink to="/" className={linkStyle}>
             Hem
           </NavLink>
@@ -68,8 +70,9 @@ const Nav = () => {
         </button>
       </div>
 
+      {/* ... mobilmenyn ... */}
       <div
-        className={`md:hidden absolute top-0 left-0 w-full bg-[var(--color-offwhite)] shadow-lg transition-all duration-300 ease-in-out overflow-hidden flex flex-col items-center gap-6 pt-24 pb-8 ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
+        className={`md:hidden absolute top-full left-0 w-full bg-[var(--color-offwhite)] shadow-lg transition-all duration-300 ease-in-out overflow-hidden flex flex-col items-center gap-6 pt-8 pb-8 ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
       >
         <NavLink
           to="/"

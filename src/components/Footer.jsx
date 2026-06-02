@@ -3,7 +3,7 @@ import Compass from "../assets/compass-image.webp";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-(--color-offwhite) pt-12 pb-6 px-6 mt-12">
+    <footer className="w-full bg-(--color-offwhite) pt-12 pb-6 px-6">
       <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-10">
         <div className="flex justify-center md:justify-start w-full md:w-auto">
           <img

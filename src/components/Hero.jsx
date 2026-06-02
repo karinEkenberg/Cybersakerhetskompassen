@@ -1,12 +1,12 @@
-// src/components/Hero.jsx
 import React from "react";
 import Compass from "../assets/compass-image.webp";
 
 const Hero = () => {
   return (
-    <section className="w-full bg-(--color-offwhite) relative z-0 shadow-md">
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between max-w-5xl mx-auto px-6 pt-32 pb-12 lg:pt-24 lg:pb-24">
-        {/* Text and buttons */}
+    // ÄNDRING HÄR: Fixade Tailwind-syntaxen för bakgrundsfärgen
+    <section className="w-full bg-[var(--color-offwhite)] relative z-0 shadow-md mb-14">
+      {/* ÄNDRING HÄR: Tog bort pt-32 eftersom Nav nu tar hand om höjden */}
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between max-w-5xl mx-auto px-6 py-16 lg:py-24">
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left mt-10 lg:mt-0 lg:w-1/2">
           <h1 className="mb-4">
             Cybersäkerhets-
