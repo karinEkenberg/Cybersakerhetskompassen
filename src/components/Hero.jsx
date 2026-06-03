@@ -27,6 +27,8 @@ const Hero = () => {
             alt="3D compass for cybersecurity"
             className="w-32 lg:w-[360px] object-contain"
             fetchPriority="high"
+            width="500"
+            height="500"
           />
         </div>
       </div>

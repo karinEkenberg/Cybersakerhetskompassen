@@ -25,11 +25,12 @@ const Nav = () => {
             src={Compass}
             alt="Cybersäkerhetskompassen"
             className="w-12 md:w-16 object-contain"
+            width="500"
+            height="500"
           />
         </Link>
 
         <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 items-center font-medium">
-          {/* ... alla dina NavLinks är oförändrade ... */}
           <NavLink to="/" className={linkStyle}>
             Hem
           </NavLink>
