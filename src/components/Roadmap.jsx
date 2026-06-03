@@ -1,11 +1,30 @@
+// src/components/Roadmaps.jsx (eller vad din huvudfil heter)
 import React, { useState, useEffect } from "react";
 import Section from "./Section";
+import InteractiveRoadmap from "./InteractiveRoadmap"; // Vi döper om din nya komponent!
 import { client } from "../client";
 import Map from "../assets/map.webp";
 
-const Roadmap = () => {
+const Roadmaps = () => {
+  // State för att spara datan från Sanity
+  const [roadmaps, setRoadmaps] = useState([]);
+
+  // useEffect för att hämta datan när sidan laddas
+  useEffect(() => {
+    // GROQ-query: "Hämta alla roadmaps och deras steg (title, content)"
+    const query = '*[_type == "roadmap"]{_id, title, steps}';
+
+    client
+      .fetch(query)
+      .then((data) => {
+        setRoadmaps(data);
+      })
+      .catch((error) => console.error("Kunde inte hämta roadmaps:", error));
+  }, []);
+
   return (
-    <div>
+    <div className="">
+      {/* 1. Din befintliga Intro-sektion */}
       <Section
         headingLevel="h1"
         title="Roadmaps"
@@ -13,8 +32,17 @@ const Roadmap = () => {
         imageSrc={Map}
         imageAlt="Illustration av en karta som symboliserar en roadmap"
       />
+
+      {/* 2. Loopa ut de interaktiva roadmapsen från Sanity */}
+      {roadmaps.map((roadmap) => (
+        <InteractiveRoadmap
+          key={roadmap._id}
+          title={roadmap.title}
+          steps={roadmap.steps}
+        />
+      ))}
     </div>
   );
 };
 
-export default Roadmap;
+export default Roadmaps;
