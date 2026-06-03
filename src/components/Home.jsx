@@ -8,6 +8,7 @@ import Matching from "../assets/matching.webp";
 import Coder from "../assets/coder.webp";
 import Handshake from "../assets/handshake.webp";
 import Certificates from "../assets/certificates-illustration.webp";
+import Map from "../assets/map.webp";
 
 const Home = () => {
   return (
@@ -33,22 +34,34 @@ const Home = () => {
       />
 
       <Section
+        headingLevel="h1"
+        title="Roadmaps"
+        text="Vår roadmap är din guide genom cybersäkerhetens värld, med tydliga steg och resurser för att hjälpa dig att navigera och växa i branschen."
+        imageSrc={Map}
+        imageAlt="Illustration av en karta som symboliserar en roadmap"
+        buttonLink="/roadmaps"
+        buttonText="Utforska roadmaps"
+        buttonStyle="btn-primary"
+        reverse={true}
+      />
+
+      <Section
         title="Cyber Lexikon"
         text="IT-säkerhet är fullt av akronymer, tekniska termer och komplexa principer. I vårt lexikon rätas frågetecknen ut. Här bryts svåra teoretiska koncept och säkerhetsbegrepp ner till enkla, pedagogiska förklaringar så att en lätt kan förstå helhetsbilden."
         buttonText="Öppna lexikonet"
         buttonStyle="btn-primary"
         imageSrc={Books}
         imageAlt="Book or screen with a padlock representing security terms"
-        reverse={true}
       />
 
       <Section
         title="Hitta din matchning"
         text="Är du osäker på om du vill gräva djupt i digital forensik eller arbeta mer in-house med incidentrespons? Gör vårt matchmaking-test för att matcha dina personliga intressen, programmeringskunskaper och styrkor mot rätt typ av framtida utmaning."
         buttonText="Gör testet"
-        buttonStyle="btn-warning"
+        buttonStyle="btn-primary"
         imageSrc={Matching}
         imageAlt="Interactive quiz or puzzle pieces fitting together"
+        reverse={true}
       />
 
       <Section
@@ -58,7 +71,6 @@ const Home = () => {
         buttonStyle="btn-primary"
         imageSrc={Coder}
         imageAlt="Linux terminal or network security dashboard"
-        reverse={true}
       />
 
       <Section
@@ -68,6 +80,7 @@ const Home = () => {
         buttonStyle="btn-primary"
         imageSrc={Handshake}
         imageAlt="Two corporate professionals shaking hands"
+        reverse={true}
       />
 
       <Section
@@ -77,7 +90,6 @@ const Home = () => {
         buttonStyle="btn-primary"
         imageSrc={Certificates}
         imageAlt="Illustration showing alternative career building over expensive certificates"
-        reverse={true}
       />
     </>
   );

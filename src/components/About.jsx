@@ -4,7 +4,7 @@ import KarinAndDavid from "../assets/karin-and-david.webp";
 
 const About = () => {
   return (
-    <div className="pt-20 lg:pt-32">
+    <div className="">
       <Section
         headingLevel="h1"
         title="Vilka är vi?"

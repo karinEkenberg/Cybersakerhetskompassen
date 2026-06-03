@@ -8,6 +8,7 @@ const Contact = React.lazy(() => import("./components/Contact"));
 const Integrity = React.lazy(() => import("./components/Integrity"));
 const Error = React.lazy(() => import("./components/Error"));
 const Roles = React.lazy(() => import("./components/Roles"));
+const Roadmap = React.lazy(() => import("./components/Roadmap"));
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/om-oss" element={<About />} />
             <Route path="/kontakta-oss" element={<Contact />} />
             <Route path="/roller" element={<Roles />} />
+            <Route path="/roadmaps" element={<Roadmap />} />
             <Route path="*" element={<Error />} />{" "}
           </Routes>
         </div>
