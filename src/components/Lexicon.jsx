@@ -54,13 +54,13 @@ const Lexicon = () => {
               placeholder="Sök efter en term eller akronym (t.ex. MFA)..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#dca4a4] shadow-sm text-lg bg-transparent text-kompass-black"
+              className="w-full p-4 rounded-md border border-gray-400 focus:outline-none focus:ring-2 focus:ring-[#dca4a4] shadow-sm text-lg bg-transparent text-[var(--color-kompass-black)] placeholder-gray-800"
             />
           </div>
 
           {terms === null ? (
             <div className="flex justify-center items-center py-20">
-              <p className="text-gray-700 text-lg">Laddar lexikon...</p>
+              <p className="text-gray-800 text-lg">Laddar lexikon...</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
@@ -71,10 +71,10 @@ const Lexicon = () => {
                     className="bg-[var(--color-offwhite)] rounded-md p-6 md:p-8 flex flex-col"
                     style={{ boxShadow: "4px 4px 0px rgba(43, 43, 43, 0.15)" }}
                   >
-                    <h2 className="text-2xl font-bold text-kompass-black mb-2 flex items-baseline gap-3">
+                    <h2 className="text-2xl font-bold text-[var(--color-kompass-black)] mb-2 flex items-baseline gap-3">
                       {item.term}
                       {item.abbreviation && (
-                        <span className="text-lg font-normal text-gray-500">
+                        <span className="text-lg font-normal text-gray-800">
                           ({item.abbreviation})
                         </span>
                       )}
@@ -88,19 +88,19 @@ const Lexicon = () => {
                               <p className="mb-4 last:mb-0">{children}</p>
                             ),
                             h3: ({ children }) => (
-                              <h3 className="text-xl font-bold mt-6 mb-2 text-kompass-black">
+                              <h3 className="text-xl font-bold mt-6 mb-2 text-[var(--color-kompass-black)]">
                                 {children}
                               </h3>
                             ),
                             h4: ({ children }) => (
-                              <h4 className="text-lg font-bold mt-6 mb-2 text-kompass-black">
+                              <h4 className="text-lg font-bold mt-6 mb-2 text-[var(--color-kompass-black)]">
                                 {children}
                               </h4>
                             ),
                           },
                           marks: {
                             strong: ({ children }) => (
-                              <strong className="font-bold text-kompass-black">
+                              <strong className="font-bold text-[var(--color-kompass-black)]">
                                 {children}
                               </strong>
                             ),
@@ -111,7 +111,7 @@ const Lexicon = () => {
                   </article>
                 ))
               ) : (
-                <p className="text-center text-gray-700 text-lg py-10 md:col-span-2">
+                <p className="text-center text-gray-800 text-lg py-10 md:col-span-2">
                   Inga termer matchade din sökning.
                 </p>
               )}
