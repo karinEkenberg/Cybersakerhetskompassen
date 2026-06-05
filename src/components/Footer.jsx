@@ -12,6 +12,7 @@ const Footer = () => {
             className="w-32 md:w-48 object-contain"
             width="192"
             height="192"
+            fetchpriority="high"
           />
         </div>
 
