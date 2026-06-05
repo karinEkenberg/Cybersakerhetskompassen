@@ -1,30 +1,22 @@
-// src/components/Roadmaps.jsx (eller vad din huvudfil heter)
 import React, { useState, useEffect } from "react";
 import Section from "./Section";
-import InteractiveRoadmap from "./InteractiveRoadmap"; // Vi döper om din nya komponent!
+import InteractiveRoadmap from "./InteractiveRoadmap";
 import { client } from "../client";
 import Map from "../assets/map.webp";
 
 const Roadmaps = () => {
-  // State för att spara datan från Sanity
-  const [roadmaps, setRoadmaps] = useState([]);
+  const [roadmaps, setRoadmaps] = useState(null);
 
-  // useEffect för att hämta datan när sidan laddas
   useEffect(() => {
-    // GROQ-query: "Hämta alla roadmaps och deras steg (title, content)"
     const query = '*[_type == "roadmap"]{_id, title, steps}';
-
     client
       .fetch(query)
-      .then((data) => {
-        setRoadmaps(data);
-      })
+      .then((data) => setRoadmaps(data))
       .catch((error) => console.error("Kunde inte hämta roadmaps:", error));
   }, []);
 
   return (
-    <div className="">
-      {/* 1. Din befintliga Intro-sektion */}
+    <div>
       <Section
         headingLevel="h1"
         title="Roadmaps"
@@ -35,15 +27,24 @@ const Roadmaps = () => {
         imageWidth="296"
         imageHeight="154"
       />
-
-      {/* 2. Loopa ut de interaktiva roadmapsen från Sanity */}
-      {roadmaps.map((roadmap) => (
-        <InteractiveRoadmap
-          key={roadmap._id}
-          title={roadmap.title}
-          steps={roadmap.steps}
-        />
-      ))}
+      {roadmaps === null ? (
+        <div className="w-full bg-[#c0e1d2] px-6 py-8 lg:py-12">
+          {[1, 2, 3].map((i) => (
+            <div
+              key={i}
+              className="max-w-5xl mx-auto mb-6 h-48 bg-gray-200 rounded-md animate-pulse"
+            />
+          ))}
+        </div>
+      ) : (
+        roadmaps.map((roadmap) => (
+          <InteractiveRoadmap
+            key={roadmap._id}
+            title={roadmap.title}
+            steps={roadmap.steps}
+          />
+        ))
+      )}
     </div>
   );
 };

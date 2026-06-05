@@ -92,7 +92,8 @@ const Section = ({
               height={imageHeight}
               fetchpriority={priority ? "high" : "auto"}
               loading={priority ? undefined : "lazy"}
-              className="w-full max-w-md lg:max-w-none h-auto rounded object-cover"
+              className="w-full max-w-md lg:max-w-none rounded object-cover"
+              style={{ aspectRatio: `${imageWidth} / ${imageHeight}` }}
             />
           </div>
         )}
