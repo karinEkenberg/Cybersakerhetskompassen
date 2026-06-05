@@ -15,6 +15,7 @@ const Home = () => {
     <>
       <Hero />
       <Section
+        headingLevel="h1"
         title="För studenter av studenter"
         text="Idén till Cybersäkerhetskompassen föddes ur vår egen förvirring i början av utbildningen. Det saknades en tydlig bild av vilka inriktningar som faktiskt finns – och ju längre in i studierna vi kommer, desto fler dörrar upptäcker vi öppnas. Även om det självklart är bra att ha en bred grundkunskap, vill vi underlätta ingången i branschen för andra. Vi vill hjälpa studenter att navigera rätt tidigt, så att dyrbar tid kan läggas där den gör mest nytta. Vi har helt enkelt byggt den sajt vi själva hade önskat fanns när vi började."
         buttonText="Läs mer"
@@ -34,7 +35,6 @@ const Home = () => {
       />
 
       <Section
-        headingLevel="h1"
         title="Roadmaps"
         text="Vår roadmap är din guide genom cybersäkerhetens värld, med tydliga steg och resurser för att hjälpa dig att navigera och växa i branschen."
         imageSrc={Map}
