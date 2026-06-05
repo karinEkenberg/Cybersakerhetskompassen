@@ -25,8 +25,8 @@ const Nav = () => {
             src={NavCompass}
             alt="Cybersäkerhetskompassen"
             className="w-12 md:w-16 object-contain"
-            width="500"
-            height="500"
+            width="64"
+            height="64"
           />
         </Link>
 

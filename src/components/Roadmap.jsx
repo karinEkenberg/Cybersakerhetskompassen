@@ -31,6 +31,9 @@ const Roadmaps = () => {
         text="Vår roadmap är din guide genom cybersäkerhetens värld, med tydliga steg och resurser för att hjälpa dig att navigera och växa i branschen."
         imageSrc={Map}
         imageAlt="Illustration av en karta som symboliserar en roadmap"
+        priority={true}
+        imageWidth="296"
+        imageHeight="154"
       />
 
       {/* 2. Loopa ut de interaktiva roadmapsen från Sanity */}

@@ -10,8 +10,8 @@ const Footer = () => {
             src={FooterCompass}
             alt="Cybersäkerhetskompassen Logotyp"
             className="w-32 md:w-48 object-contain"
-            width="500"
-            height="500"
+            width="192"
+            height="192"
           />
         </div>
 

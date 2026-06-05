@@ -12,14 +12,15 @@ const Section = ({
   reverse = false,
   children,
   buttonLink,
-  headingLevel = "h2", 
+  headingLevel = "h2",
+  imageWidth = "500",
+  imageHeight = "500",
+  priority = false,
 }) => {
   const HeadingTag = headingLevel;
 
   return (
-    <section
-      className="w-full bg-[#c0e1d2] px-6 py-8 lg:py-12 first-of-type:pt-16 lg:first-of-type:pt-24 last-of-type:pb-16 lg:last-of-type:pb-24"
-    >
+    <section className="w-full bg-[#c0e1d2] px-6 py-8 lg:py-12 first-of-type:pt-16 lg:first-of-type:pt-24 last-of-type:pb-16 lg:last-of-type:pb-24">
       <div
         className={`max-w-5xl mx-auto bg-[var(--color-offwhite)] rounded-md p-6 md:p-10 lg:p-12 flex flex-col lg:items-center justify-between gap-8 lg:gap-12 ${
           reverse ? "lg:flex-row-reverse" : "lg:flex-row"
@@ -87,6 +88,10 @@ const Section = ({
             <img
               src={imageSrc}
               alt={imageAlt || "Section illustration"}
+              width={imageWidth}
+              height={imageHeight}
+              fetchpriority={priority ? "high" : "auto"}
+              loading={priority ? undefined : "lazy"}
               className="w-full max-w-md lg:max-w-none h-auto rounded object-cover"
             />
           </div>
