@@ -10,6 +10,7 @@ const Error = React.lazy(() => import("./components/Error"));
 const Roles = React.lazy(() => import("./components/Roles"));
 const Roadmap = React.lazy(() => import("./components/Roadmap"));
 const Lexicon = React.lazy(() => import("./components/Lexicon"));
+const Matching = React.lazy(() => import("./components/Matching"));
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/roller" element={<Roles />} />
             <Route path="/roadmaps" element={<Roadmap />} />
             <Route path="/lexikon" element={<Lexicon />} />
+            <Route path="/matchmaking" element={<Matching />} />
             <Route path="*" element={<Error />} />{" "}
           </Routes>
         </div>
