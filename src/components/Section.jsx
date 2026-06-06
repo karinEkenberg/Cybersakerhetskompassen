@@ -20,7 +20,7 @@ const Section = ({
   const HeadingTag = headingLevel;
 
   return (
-    <section className="w-full bg-[#c0e1d2] px-6 py-8 lg:py-12 first-of-type:pt-16 lg:first-of-type:pt-24 last-of-type:pb-16 lg:last-of-type:pb-24">
+    <section className="w-full bg-[#c0e1d2] px-6 py-4 lg:py-6 first-of-type:pt-10 lg:first-of-type:pt-14 last-of-type:pb-10 lg:last-of-type:pb-14">
       <div
         className={`max-w-5xl mx-auto bg-[var(--color-offwhite)] rounded-md p-6 md:p-10 lg:p-12 flex flex-col lg:items-center justify-between gap-8 lg:gap-12 ${
           reverse ? "lg:flex-row-reverse" : "lg:flex-row"

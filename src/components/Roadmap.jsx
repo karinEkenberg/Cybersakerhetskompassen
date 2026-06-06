@@ -32,7 +32,7 @@ const Roadmaps = () => {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="max-w-5xl mx-auto mb-6 h-48 bg-gray-200 rounded-md animate-pulse"
+              className="max-w-5xl mx-auto h-48 bg-gray-200 rounded-md animate-pulse"
             />
           ))}
         </div>
