@@ -5,7 +5,7 @@ import Mail from "../assets/mail.webp";
 
 const Contact = () => {
   return (
-    <div className="pt-20 lg:pt-32">
+    <div>
       <Section
         headingLevel="h1"
         title="Hör av dig till oss"

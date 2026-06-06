@@ -1,5 +1,6 @@
 import React from "react";
 import HeroCompass from "../assets/hero-compass-image.webp";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -16,8 +17,12 @@ const Hero = () => {
           <p className="mb-8 text-lg">Vi slussar IT-säkerhetsstudenter rätt</p>
 
           <div className="flex gap-4">
-            <button className="btn-primary">Börja här</button>
-            <button className="btn-warning">Roadmaps</button>
+            <Link to="/matchmaking" className="btn-primary">
+              Börja här
+            </Link>
+            <Link to="/roadmaps" className="btn-warning">
+              Roadmaps
+            </Link>
           </div>
         </div>
 
