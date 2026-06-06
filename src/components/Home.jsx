@@ -50,6 +50,7 @@ const Home = () => {
         text="IT-säkerhet är fullt av akronymer, tekniska termer och komplexa principer. I vårt lexikon rätas frågetecknen ut. Här bryts svåra teoretiska koncept och säkerhetsbegrepp ner till enkla, pedagogiska förklaringar så att en lätt kan förstå helhetsbilden."
         buttonText="Öppna lexikonet"
         buttonStyle="btn-primary"
+        buttonLink="/lexikon"
         imageSrc={Books}
         imageAlt="Book or screen with a padlock representing security terms"
       />
@@ -59,6 +60,7 @@ const Home = () => {
         text="Är du osäker på om du vill gräva djupt i digital forensik eller arbeta mer in-house med incidentrespons? Gör vårt matchmaking-test för att matcha dina personliga intressen, programmeringskunskaper och styrkor mot rätt typ av framtida utmaning."
         buttonText="Gör testet"
         buttonStyle="btn-primary"
+        buttonLink="/matchmaking"
         imageSrc={Matching}
         imageAlt="Interactive quiz or puzzle pieces fitting together"
         reverse={true}
@@ -68,6 +70,7 @@ const Home = () => {
         title="Praktiska labbar & Projekt"
         text="Teori i all ära, men det är i terminalen det händer. Här samlas dokumentation och genomgångar från praktiska labbar, SOC-övervakning och automatiserade miljöer. Perfekt inspiration för hur en kan vinkla sina praktiska erfarenheter i en kompetensbaserad intervju."
         buttonText="Se labbar"
+        buttonLink="/labbar"
         buttonStyle="btn-primary"
         imageSrc={Coder}
         imageAlt="Linux terminal or network security dashboard"
@@ -78,6 +81,7 @@ const Home = () => {
         text="Vägen ut i arbetslivet handlar mycket om kontakter. Vi tipsar om hur en kan bygga upp ett starkt professionellt nätverk på LinkedIn och GitHub utan konsultroller, och hur en bäst hittar och rankar potentiella LIA-platser på företag som tar cybersäkerhet på allvar."
         buttonText="Hitta nätverk"
         buttonStyle="btn-primary"
+        buttonLink="/natverk"
         imageSrc={Handshake}
         imageAlt="Two corporate professionals shaking hands"
         reverse={true}

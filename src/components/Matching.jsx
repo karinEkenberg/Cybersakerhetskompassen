@@ -100,8 +100,8 @@ const Matching = () => {
                     onClick={() => handleTraitClick(trait)}
                     className={`px-4 py-2 rounded-md font-medium transition-colors border-2 ${
                       selectedTraits.includes(trait)
-                        ? "bg-[#dca4a4] border-[#dca4a4] text-[var(--color-kompass-black)]"
-                        : "bg-transparent border-gray-400 text-gray-700 hover:border-[#dca4a4]"
+                        ? "bg-[#dca4a4]  text-[var(--color-kompass-black)]"
+                        : "bg-transparent border-[var(--color-primary-hover)] text-gray-700 hover:border-[#dca4a4]"
                     }`}
                   >
                     {trait}
@@ -123,7 +123,7 @@ const Matching = () => {
                           <button
                             key={j}
                             onClick={() => handleQuizAnswer(ans.type)}
-                            className="flex-1 p-4 text-left border-2 border-gray-400 rounded-md hover:border-[#dca4a4] hover:bg-[#dca4a4]/10 transition-colors"
+                            className="flex-1 p-4 text-left border-2 border-[var(--color-primary-hover)] rounded-md hover:border-[#dca4a4] hover:bg-[#dca4a4]/10 transition-colors"
                           >
                             {ans.text}
                           </button>
