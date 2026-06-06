@@ -9,6 +9,7 @@ const Nav = () => {
     setIsOpen(!isOpen);
   };
 
+  // Base styling for navigation links
   const linkStyle = ({ isActive }) =>
     `hover:text-black pb-1 transition-all duration-100 ${
       isActive
@@ -17,19 +18,19 @@ const Nav = () => {
     }`;
 
   return (
-    // ÄNDRING HÄR: absolute -> sticky
-    <nav className="sticky top-0 left-0 w-full z-50 px-6 py-6 bg-[var(--color-offwhite)]">
+    <nav className="sticky top-0 left-0 w-full z-50 px-6 py-3 bg-[var(--color-offwhite)] shadow-sm">
       <div className="max-w-7xl mx-auto flex justify-between items-center relative">
         <Link to="/" className="flex items-center gap-2 z-50">
           <img
             src={NavCompass}
             alt="Cybersäkerhetskompassen"
-            className="w-12 md:w-16 object-contain"
-            width="64"
-            height="64"
+            className="w-10 md:w-12 object-contain"
+            width="48"
+            height="48"
           />
         </Link>
 
+        {/* Desktop menu */}
         <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 items-center font-medium">
           <NavLink to="/" className={linkStyle}>
             Hem
@@ -54,6 +55,7 @@ const Nav = () => {
           </NavLink>
         </div>
 
+        {/* Mobile menu toggle button */}
         <button
           onClick={toggleMenu}
           className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none z-50"
@@ -71,7 +73,7 @@ const Nav = () => {
         </button>
       </div>
 
-      {/* ... mobilmenyn ... */}
+      {/* Mobile menu dropdown */}
       <div
         className={`md:hidden absolute top-full left-0 w-full bg-[var(--color-offwhite)] shadow-lg transition-all duration-300 ease-in-out overflow-hidden flex flex-col items-center gap-6 pt-8 pb-8 ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
       >
