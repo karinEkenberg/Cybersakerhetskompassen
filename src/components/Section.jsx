@@ -1,5 +1,6 @@
 import React from "react";
 import { PortableText } from "@portabletext/react";
+import { Link } from "react-router-dom";
 
 const Section = ({
   title,
@@ -61,16 +62,23 @@ const Section = ({
           {buttonText && (
             <>
               {buttonLink ? (
-                <a
-                  href={buttonLink}
-                  className={`${buttonStyle} mt-6`}
-                  target={buttonLink.startsWith("http") ? "_blank" : "_self"}
-                  rel={
-                    buttonLink.startsWith("http") ? "noopener noreferrer" : ""
-                  }
-                >
-                  {buttonText}
-                </a>
+                buttonLink.startsWith("http") ? (
+                  <a
+                    href={buttonLink}
+                    className={`${buttonStyle} mt-6 block w-fit`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {buttonText}
+                  </a>
+                ) : (
+                  <Link
+                    to={buttonLink}
+                    className={`${buttonStyle} mt-6 block w-fit`}
+                  >
+                    {buttonText}
+                  </Link>
+                )
               ) : (
                 <button
                   className={`${buttonStyle} mt-6`}
