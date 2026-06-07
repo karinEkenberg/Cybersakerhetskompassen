@@ -9,7 +9,6 @@ const Nav = () => {
     setIsOpen(!isOpen);
   };
 
-  // Base styling for navigation links
   const linkStyle = ({ isActive }) =>
     `hover:text-black pb-1 transition-all duration-100 ${
       isActive
@@ -30,7 +29,6 @@ const Nav = () => {
           />
         </Link>
 
-        {/* Desktop menu */}
         <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 items-center font-medium">
           <NavLink to="/" className={linkStyle}>
             Hem
@@ -55,7 +53,6 @@ const Nav = () => {
           </NavLink>
         </div>
 
-        {/* Mobile menu toggle button */}
         <button
           onClick={toggleMenu}
           className="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none z-50"
@@ -73,9 +70,12 @@ const Nav = () => {
         </button>
       </div>
 
-      {/* Mobile menu dropdown */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-[var(--color-offwhite)] shadow-lg transition-all duration-300 ease-in-out overflow-hidden flex flex-col items-center gap-6 pt-8 pb-8 ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
+        className={`md:hidden absolute top-full left-0 w-full bg-[var(--color-offwhite)] shadow-lg transition-all duration-300 ease-in-out overflow-hidden flex flex-col items-center gap-6 ${
+          isOpen
+            ? "max-h-[500px] opacity-100 py-8 pointer-events-auto"
+            : "max-h-0 opacity-0 py-0 pointer-events-none"
+        }`}
       >
         <NavLink
           to="/"
