@@ -25,7 +25,7 @@ const Contact = () => {
       />
 
       <Section
-        title="David"
+        title="David Lindskog"
         text="IT-säkerhetsstudent med sikte på cybersäkerhetsbranschen. Tveka inte att skicka iväg ett meddelande om du vill nätverka eller diskutera framtida projekt!"
         buttonText="David på LinkedIn"
         buttonStyle="btn-primary"

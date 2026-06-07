@@ -73,7 +73,7 @@ const Matching = () => {
         imageHeight="500"
       />
 
-      <div className="w-full px-6 pb-24 lg:pb-32">
+      <div className="w-full px-6 pb-12 lg:pb-12">
         <div className="max-w-5xl mx-auto">
           <div className="mb-12 bg-[var(--color-offwhite)] p-8 rounded-md shadow-[4px_4px_0px_rgba(43,43,43,0.15)]">
             <div className="flex justify-between items-center mb-6 border-b border-gray-300 pb-4">
