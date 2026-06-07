@@ -42,7 +42,7 @@ const Footer = () => {
                 href="/om-oss"
                 className="hover:underline text-sm md:text-base"
               >
-                Vilka är vi?
+                Vilka vi är?
               </a>
               <a
                 href="/integritet"
