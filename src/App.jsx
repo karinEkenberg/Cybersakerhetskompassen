@@ -14,6 +14,7 @@ const Roadmap = React.lazy(() => import("./components/Roadmap"));
 const Lexicon = React.lazy(() => import("./components/Lexicon"));
 const Matching = React.lazy(() => import("./components/Matching"));
 const Lab = React.lazy(() => import("./components/Lab"));
+const Network = React.lazy(() => import("./components/Network"));
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
               <Route path="/lexikon" element={<Lexicon />} />
               <Route path="/matchmaking" element={<Matching />} />
               <Route path="/labbar" element={<Lab />} />
+              <Route path="/natverk" element={<Network />} />
               <Route path="*" element={<Error />} />
             </Routes>
           </Suspense>
