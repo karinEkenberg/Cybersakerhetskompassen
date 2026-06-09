@@ -92,6 +92,7 @@ const Home = () => {
         text="Många undrar om dyra certifikat är ett krav för att få första jobbet inom cybersäkerhet. Efter att ha lyssnat på branschen i Sverige är budskapet tydligt: certifikat skadar absolut inte och kan ge fördelar, men det väger sällan lika tungt som praktisk kunskap. Dessutom är det standard att arbetsgivaren betalar för certifieringar väl på plats. Vi uppmuntrar därför inte studenter att lägga tusenlappar ur egen ficka. Satsa hellre på att bygga egna projekt och labbar att visa upp i en portfolio."
         buttonText="Se våra labbar"
         buttonStyle="btn-primary"
+        buttonLink="/labbar"
         imageSrc={Certificates}
         imageAlt="Illustration showing alternative career building over expensive certificates"
       />
