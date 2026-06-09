@@ -33,17 +33,17 @@ const Nav = () => {
           <NavLink to="/" className={linkStyle}>
             Hem
           </NavLink>
-          <NavLink to="/roller" className={linkStyle}>
-            Roller
+          <NavLink to="/matchmaking" className={linkStyle}>
+            Matchmaking
           </NavLink>
           <NavLink to="/roadmaps" className={linkStyle}>
             Roadmaps
           </NavLink>
+          <NavLink to="/roller" className={linkStyle}>
+            Roller
+          </NavLink>
           <NavLink to="/lexikon" className={linkStyle}>
             Lexikon
-          </NavLink>
-          <NavLink to="/matchmaking" className={linkStyle}>
-            Matchmaking
           </NavLink>
           <NavLink to="/labbar" className={linkStyle}>
             Labbar
