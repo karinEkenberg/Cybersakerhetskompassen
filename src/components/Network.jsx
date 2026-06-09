@@ -39,8 +39,10 @@ const Network = () => {
         // imageSrc={WebinarImage}
         imageAlt="People participating in an online cybersecurity webinar"
         priority={false}
+        buttonText="Hitta webbinarier hos EC-Council →"
+        buttonLink="https://www.eccouncil.org/cybersecurity-exchange/cyber-talks/"
+        buttonStyle="text-emerald-600 underline hover:text-emerald-800 font-medium"
       />
-      
     </>
   );
 };
