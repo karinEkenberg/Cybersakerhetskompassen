@@ -85,11 +85,11 @@ const Nav = () => {
           Hem
         </NavLink>
         <NavLink
-          to="/roller"
+          to="/matchmaking"
           onClick={toggleMenu}
           className={linkStyle + " w-full text-center"}
         >
-          Roller
+          Matchmaking
         </NavLink>
         <NavLink
           to="/roadmaps"
@@ -99,18 +99,18 @@ const Nav = () => {
           Roadmaps
         </NavLink>
         <NavLink
+          to="/roller"
+          onClick={toggleMenu}
+          className={linkStyle + " w-full text-center"}
+        >
+          Roller
+        </NavLink>
+        <NavLink
           to="/lexikon"
           onClick={toggleMenu}
           className={linkStyle + " w-full text-center"}
         >
           Lexikon
-        </NavLink>
-        <NavLink
-          to="/matchmaking"
-          onClick={toggleMenu}
-          className={linkStyle + " w-full text-center"}
-        >
-          Matchmaking
         </NavLink>
         <NavLink
           to="/labbar"
