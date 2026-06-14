@@ -57,7 +57,7 @@ const Lab = () => {
         imageHeight="500"
       />
 
-      <div className="w-full px-6 pt-2 pb-24 lg:pb-32">
+      <div className="w-full px-6 pt-2 pb-12">
         <div className="max-w-5xl mx-auto">
           {labs === null ? (
             <p className="text-center py-10">Laddar innehåll...</p>
