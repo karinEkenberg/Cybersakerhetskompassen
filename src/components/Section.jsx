@@ -51,6 +51,18 @@ const Section = ({
                         <p className="leading-relaxed mb-4">{children}</p>
                       ),
                     },
+                    list: {
+                      bullet: ({ children }) => (
+                        <ul className="list-disc pl-5 mb-4 space-y-2 text-gray-800">
+                          {children}
+                        </ul>
+                      ),
+                      number: ({ children }) => (
+                        <ol className="list-decimal pl-5 mb-4 space-y-2 text-gray-800">
+                          {children}
+                        </ol>
+                      ),
+                    },
                   }}
                 />
               )}
