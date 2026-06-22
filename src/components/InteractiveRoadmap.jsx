@@ -20,7 +20,7 @@ const InteractiveRoadmap = ({ title, steps }) => {
               <button
                 key={index}
                 onClick={() => setSelectedStep(step)}
-                className="bg-[#dca4a4] hover:bg-[#c98e8e] transition-colors duration-200 rounded-md py-6 px-4 flex justify-center items-center text-kompass-black font-medium"
+                className="bg-[#dca4a4] hover:bg-[#c98e8e] cursor-pointer transition-colors duration-200 rounded-md py-6 px-4 flex justify-center items-center text-kompass-black font-medium"
                 style={{ boxShadow: "4px 4px 0px rgba(43, 43, 43, 0.15)" }}
               >
                 {step.stepTitle}
@@ -40,7 +40,7 @@ const InteractiveRoadmap = ({ title, steps }) => {
           >
             <button
               onClick={() => setSelectedStep(null)}
-              className="absolute top-2 right-2 p-4 text-gray-500 hover:text-black text-3xl leading-none flex items-center justify-center transition-colors"
+              className="absolute top-2 right-2 p-4 text-gray-500 hover:text-black text-3xl leading-none flex items-center justify-center transition-colors cursor-pointer"
               aria-label="Stäng rutan"
             >
               &times;
