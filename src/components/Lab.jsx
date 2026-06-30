@@ -49,7 +49,7 @@ const Lab = () => {
       <Section
         headingLevel="h1"
         title="Labb-miljön"
-        text="Teori är bra, men praktik är bäst. Här samlar vi guider för hur du bygger egna säkra miljöer, handfasta karriärtips och praktiska övningar för att vässa dina färdigheter."
+        text="Teori är bra, men praktik är bäst. Här samlar vi inga färdiga facit, utan inspirationsidéer för att komma igång. Alla har olika system och förutsättningar, så det är fritt fram att anpassa upplägget och hitta på helt egna varianter utifrån vad en själv vill lära sig. Det viktigaste är att dokumentera och visa upp sina framsteg för omvärlden. Lägg upp dina projekt på GitHub, på en egen portfoliosida eller under projektfliken på LinkedIn."
         imageSrc={LabsImage}
         imageAlt="Illustration av labbmiljö"
         priority={true}

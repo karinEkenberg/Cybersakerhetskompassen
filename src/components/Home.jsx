@@ -57,7 +57,7 @@ const Home = () => {
 
       <Section
         title="Hitta din matchning"
-        text="Är du osäker på om du vill gräva djupt i digital forensik eller arbeta mer in-house med incidentrespons? Gör vårt matchmaking-test för att matcha dina personliga intressen, programmeringskunskaper och styrkor mot rätt typ av framtida utmaning."
+        text="Cybersäkerhetsbranschen är enorm och det kan vara svårt att veta vilken väg som passar bäst. Dras du till offensiv sårbarhetsanalys, defensivt nätverksförsvar, eller strategiskt arbete med risker och regelverk? Gör vårt matchmaking-test för att matcha dina personliga intressen, tekniska kunskaper och styrkor mot rätt typ av framtida utmaning."
         buttonText="Gör testet"
         buttonStyle="btn-primary"
         buttonLink="/matchmaking"
@@ -78,7 +78,7 @@ const Home = () => {
 
       <Section
         title="Nätverk & Arbetsliv"
-        text="Vägen ut i arbetslivet handlar mycket om kontakter. Vi tipsar om hur en kan bygga upp ett starkt professionellt nätverk på LinkedIn och GitHub utan konsultroller, och hur en bäst hittar och rankar potentiella LIA-platser på företag som tar cybersäkerhet på allvar."
+        text="Vägen ut i arbetslivet handlar mycket om kontakter. Vi tipsar om hur en kan bygga upp ett starkt professionellt nätverk på LinkedIn och GitHub, och hur en bäst hittar och utvärderar potentiella LIA-platser. Oavsett om målet är en roll som konsult, i ett internt säkerhetsteam eller inom den offentliga sektorn, får du verktygen för att hitta arbetsplatser som tar cybersäkerhet på allvar."
         buttonText="Hitta nätverk"
         buttonStyle="btn-primary"
         buttonLink="/natverk"
