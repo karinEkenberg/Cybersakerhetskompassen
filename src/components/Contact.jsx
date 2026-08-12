@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "./Section";
 import KarinAndDavid from "../assets/karin-and-david.webp";
+import Karin from "../assets/karin-ekenberg.webp";
 import Mail from "../assets/mail.webp";
 
 const Contact = () => {
@@ -20,7 +21,7 @@ const Contact = () => {
         buttonText="Karin på LinkedIn"
         buttonStyle="btn-primary"
         buttonLink="https://www.linkedin.com/in/karin-ekenberg-webbutvecklare/"
-        imageSrc={KarinAndDavid}
+        imageSrc={Karin}
         imageAlt="Portrait of Karin"
       />
 
