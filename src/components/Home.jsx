@@ -57,8 +57,8 @@ const Home = () => {
 
       <Section
         title="Hitta din matchning"
-        text="Cybersäkerhetsbranschen är enorm och det kan vara svårt att veta vilken väg som passar bäst. Dras du till offensiv sårbarhetsanalys, defensivt nätverksförsvar, eller strategiskt arbete med risker och regelverk? Gör vårt matchmaking-test för att matcha dina personliga intressen, tekniska kunskaper och styrkor mot rätt typ av framtida utmaning."
-        buttonText="Gör testet"
+        text="Cybersäkerhetsbranschen är bred och rymmer många olika profiler. Dras du till problemlösning och kod, metodiska utredningar eller strategisk struktur? Välj de personliga egenskaper och styrkor som stämmer bäst in på dig, så ser du direkt vilka roller i branschen som passar din profil."
+        buttonText="Matcha"
         buttonStyle="btn-primary"
         buttonLink="/matchmaking"
         imageSrc={Matching}
