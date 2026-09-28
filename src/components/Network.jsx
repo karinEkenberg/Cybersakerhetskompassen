@@ -48,6 +48,41 @@ const Network = () => {
       </Section>
 
       <Section
+        title="Rootr: Plattform och mentorskap för juniorer"
+        text="Rootr.se är en svensk plattform framtagen för att ge personer på väg in i branschen bättre verktyg, större insyn i arbetsmarknaden och en rakare väg till första jobbet."
+        priority={false}
+      >
+        <ul className="space-y-4">
+          <li>
+            <strong>Ansök om en branschmentor:</strong> Få möjligheten att
+            matchas ihop med en etablerad mentor inom tech och cybersäkerhet.
+            Ett mentorskap ger ett praktiskt bollplank för tekniska vägval,
+            CV-granskning och förberedelser inför intervjuer.
+          </li>
+          <li>
+            <strong>Transparens i rekryteringsprocessen:</strong> Logga sökta
+            tjänster och få direkt insyn i hur intervjusteg, tidsramar och
+            processer ser ut hos specifika arbetsgivare. Att se hur andra
+            kandidater har tagit sig vidare ger en realistisk bild av vad som
+            väntar.
+          </li>
+          <li>
+            <strong>Länk till plattformen:</strong> Utforska verktygen och ansök
+            om profil på{" "}
+            <a
+              href="https://rootr.se"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium underline hover:text-[#dca4a4] transition-colors"
+            >
+              rootr.se
+            </a>
+            .
+          </li>
+        </ul>
+      </Section>
+
+      <Section
         title="Klivet ut i arbetslivet: Hantera den första tiden"
         text="De första veckorna på en ny arbetsplats kan kännas överväldigande med interna system, nya förkortningar och branschjargong. Här är de bästa mentala verktygen från de som precis har gjort resan."
         priority={false}
