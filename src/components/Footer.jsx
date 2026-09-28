@@ -24,14 +24,23 @@ const Footer = () => {
           <div className="grid grid-cols-2 gap-x-12 gap-y-4 md:text-left">
             <div className="flex flex-col gap-2">
               <h3 className="font-semibold text-lg mb-2">Snabblänkar</h3>
-              <a href="#" className="hover:underline text-sm md:text-base">
-                Certifikat
+              <a
+                href="/matchmaking"
+                className="hover:underline text-sm md:text-base"
+              >
+                Matchmaking
               </a>
-              <a href="#" className="hover:underline text-sm md:text-base">
-                Certifikat
+              <a
+                href="/roadmaps"
+                className="hover:underline text-sm md:text-base"
+              >
+                Roadmaps
               </a>
-              <a href="#" className="hover:underline text-sm md:text-base">
-                Certifikat
+              <a
+                href="/roller"
+                className="hover:underline text-sm md:text-base"
+              >
+                Roller
               </a>
             </div>
 
