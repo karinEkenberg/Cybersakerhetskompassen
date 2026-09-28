@@ -163,7 +163,7 @@ const Lexicon = () => {
                     </button>
 
                     {isOpen && (
-                      <div className="p-6 md:p-8 border-t border-gray-200 bg-[#c0e1d2]/10">
+                      <div className="p-6 md:p-8 border-t border-gray-200 bg-[var(--color-secondary)]">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                           {groupedTerms[category].map((item) => (
                             <article
