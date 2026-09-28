@@ -73,9 +73,9 @@ const Network = () => {
               href="https://rootr.se"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium underline hover:text-[#dca4a4] transition-colors"
+              className="text-emerald-600 underline hover:text-emerald-800 font-medium"
             >
-              rootr.se
+              rootr.se →
             </a>
             .
           </li>
@@ -150,10 +150,42 @@ const Network = () => {
         // imageSrc={WebinarImage}
         imageAlt="People participating in an online cybersecurity webinar"
         priority={false}
-        buttonText="Hitta webbinarier hos EC-Council →"
-        buttonLink="https://www.eccouncil.org/cybersecurity-exchange/cyber-talks/"
-        buttonStyle="text-emerald-600 underline hover:text-emerald-800 font-medium"
-      />
+      >
+        <div className="flex flex-col sm:flex-row flex-wrap gap-x-6 gap-y-3 pt-2">
+          <a
+            href="https://www.sans.org/webcasts/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-600 underline hover:text-emerald-800 font-medium"
+          >
+            SANS Webcasts & Summits →
+          </a>
+          <a
+            href="https://owasp.org/chapters/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-600 underline hover:text-emerald-800 font-medium"
+          >
+            OWASP Meetups →
+          </a>
+          <a
+            href="https://www.blackhillsinfosec.com/webcasts/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-600 underline hover:text-emerald-800 font-medium"
+          >
+            Black Hills Webcasts →
+          </a>
+          <a
+            href="https://www.eccouncil.org/cybersecurity-exchange/cyber-talks/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-emerald-600 underline hover:text-emerald-800 font-medium"
+          >
+            Hitta webbinarier hos EC-Council →
+          </a>
+        </div>
+      </Section>
     </>
   );
 };
