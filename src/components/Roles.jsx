@@ -24,7 +24,7 @@ const Roles = () => {
   };
 
   return (
-    <div>
+    <div lang="sv">
       <Section
         headingLevel="h1"
         title="Roller"
@@ -56,7 +56,7 @@ const Roles = () => {
                 <a
                   key={`nav-${role._id}`}
                   href={`#${slugify(role.title)}`}
-                  className="bg-[var(--color-offwhite)] border-2 border-[var(--color-primary-hover)] text-gray-800 rounded-md py-2 px-4 font-medium transition-all duration-200 hover:border-[var(--color-warning-red)]  cursor-pointer block text-sm md:text-base"
+                  className="bg-[var(--color-offwhite)] border-2 border-[var(--color-primary-hover)] text-gray-800 rounded-md py-2 px-4 font-medium transition-all duration-200 hover:border-[var(--color-warning-red)] cursor-pointer block text-sm md:text-base [overflow-wrap:anywhere] [word-break:break-word] hyphens-auto"
                 >
                   {role.title}
                 </a>
@@ -69,7 +69,7 @@ const Roles = () => {
               <div
                 key={role._id}
                 id={slugify(role.title)}
-                className="flex h-full w-full scroll-mt-24"
+                className="flex h-full w-full min-w-0 scroll-mt-24 [&_h2]:[overflow-wrap:anywhere] [&_h2]:[word-break:break-word] [&_h2]:hyphens-auto [&_p]:[overflow-wrap:anywhere]"
               >
                 <Section
                   headingLevel="h2"
