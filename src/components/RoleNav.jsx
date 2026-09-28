@@ -14,7 +14,7 @@ const RoleNav = ({ title = "Utforska roller", targetPrefix = "" }) => {
   const [roles, setRoles] = useState(null);
 
   useEffect(() => {
-    const query = '*[_type == "role"] | order(title asc) {_id, title}';
+    const query = '*[_type == "role"]{_id, title}';
     client
       .fetch(query)
       .then((data) => setRoles(data))
@@ -25,6 +25,11 @@ const RoleNav = ({ title = "Utforska roller", targetPrefix = "" }) => {
     return null;
   }
 
+  // 1. Sortera rollerna här efter namnets längd:
+  const sortedRoles = [...roles].sort(
+    (a, b) => a.title.length - b.title.length,
+  );
+
   return (
     <div
       className="w-full max-w-5xl mx-auto bg-[var(--color-offwhite)] rounded-md p-6 md:p-8"
@@ -32,7 +37,8 @@ const RoleNav = ({ title = "Utforska roller", targetPrefix = "" }) => {
     >
       <h2 className="text-xl font-bold mb-6 text-kompass-black">{title}</h2>
       <div className="flex flex-wrap gap-3">
-        {roles.map((role) => (
+        {/* 2. Loopa över sortedRoles istället för roles: */}
+        {sortedRoles.map((role) => (
           <a
             key={`nav-${role._id}`}
             href={`${targetPrefix}#${slugify(role.title)}`}
