@@ -22,7 +22,6 @@ const Lexicon = () => {
       .fetch(query)
       .then((data) => {
         setTerms(data);
-        // Starta med alla kategorier utfällda som standard
         const initialOpen = {};
         data?.forEach((item) => {
           const cat = item.category || "Okategoriserat";
@@ -32,6 +31,25 @@ const Lexicon = () => {
       })
       .catch((error) => console.error(error));
   }, []);
+
+  // Fäller automatiskt ut relevanta kategorier när en söker, utan att låsa knapparna
+  useEffect(() => {
+    if (!terms) return;
+    if (searchTerm.trim() !== "") {
+      const searchLower = searchTerm.toLowerCase();
+      const matchingCats = {};
+      terms.forEach((item) => {
+        const match =
+          item.term?.toLowerCase().includes(searchLower) ||
+          item.abbreviation?.toLowerCase().includes(searchLower);
+        if (match) {
+          const cat = item.category || "Okategoriserat";
+          matchingCats[cat] = true;
+        }
+      });
+      setOpenCategories(matchingCats);
+    }
+  }, [searchTerm, terms]);
 
   const toggleCategory = (cat) => {
     setOpenCategories((prev) => ({
@@ -50,7 +68,6 @@ const Lexicon = () => {
     return termMatch || abbrMatch;
   });
 
-  // Gruppera filtrerade termer per kategori
   const groupedTerms = filteredTerms?.reduce((acc, item) => {
     const cat = item.category || "Okategoriserat";
     if (!acc[cat]) {
@@ -102,9 +119,7 @@ const Lexicon = () => {
           ) : (
             <div className="space-y-8">
               {categories.map((category) => {
-                // Vid sökning hålls kategorierna öppna så att träffarna syns direkt
-                const isOpen =
-                  searchTerm.trim() !== "" ? true : !!openCategories[category];
+                const isOpen = !!openCategories[category];
 
                 return (
                   <div
