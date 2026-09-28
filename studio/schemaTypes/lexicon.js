@@ -16,6 +16,13 @@ export default {
       description: 'E.g., MFA, SOC, SIEM',
     },
     {
+      name: 'category',
+      title: 'Kategori',
+      type: 'reference',
+      to: [{type: 'lexiconCategory'}],
+      description: 'Välj vilken kategori termen tillhör',
+    },
+    {
       name: 'definition',
       title: 'Definition',
       type: 'array',

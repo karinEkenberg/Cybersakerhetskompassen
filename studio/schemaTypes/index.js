@@ -3,5 +3,6 @@ import roadmap from './roadmap'
 import lexicon from './lexicon'
 import matching from './matching'
 import lab from './lab'
+import lexiconCategory from './lexiconCategory'
 
-export const schemaTypes = [role, roadmap, lexicon, matching, lab]
+export const schemaTypes = [role, roadmap, lexicon, matching, lab, lexiconCategory]
