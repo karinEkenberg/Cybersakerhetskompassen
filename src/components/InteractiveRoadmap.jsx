@@ -7,11 +7,12 @@ const InteractiveRoadmap = ({ title, steps }) => {
   return (
     <>
       <div
+        lang="sv"
         className="w-full max-w-5xl mx-auto bg-[var(--color-offwhite)] rounded-md p-6 md:p-8 lg:p-10 relative"
         style={{ boxShadow: "6px 6px 0px rgba(43, 43, 43, 0.2)" }}
       >
         {title && (
-          <h2 className="text-xl md:text-2xl font-bold text-center mb-8 text-kompass-black">
+          <h2 className="text-xl md:text-2xl font-bold text-center mb-8 text-kompass-black [overflow-wrap:anywhere] [word-break:break-word] hyphens-auto">
             {title}
           </h2>
         )}
@@ -23,7 +24,7 @@ const InteractiveRoadmap = ({ title, steps }) => {
                 key={index}
                 type="button"
                 onClick={() => setSelectedStep(step)}
-                className="bg-[#dca4a4] hover:bg-[#c98e8e] cursor-pointer transition-colors duration-200 rounded-md py-6 px-4 flex justify-center items-center text-kompass-black font-medium text-center text-sm md:text-base"
+                className="bg-[#dca4a4] hover:bg-[#c98e8e] cursor-pointer transition-colors duration-200 rounded-md py-4 px-3 md:py-6 md:px-4 flex justify-center items-center text-kompass-black font-medium text-center text-xs sm:text-sm md:text-base min-w-0 leading-snug [overflow-wrap:anywhere] [word-break:break-word] hyphens-auto"
                 style={{ boxShadow: "4px 4px 0px rgba(43, 43, 43, 0.15)" }}
               >
                 {step.stepTitle}
@@ -34,6 +35,7 @@ const InteractiveRoadmap = ({ title, steps }) => {
 
       {selectedStep && (
         <div
+          lang="sv"
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#c0e1d2]/80 backdrop-blur-sm cursor-pointer"
           onClick={() => setSelectedStep(null)}
         >
@@ -50,7 +52,7 @@ const InteractiveRoadmap = ({ title, steps }) => {
               &times;
             </button>
 
-            <h3 className="text-2xl font-bold mb-4 pr-8 text-kompass-black">
+            <h3 className="text-2xl font-bold mb-4 pr-8 text-kompass-black [overflow-wrap:anywhere] [word-break:break-word] hyphens-auto">
               {selectedStep.stepTitle}
             </h3>
 
