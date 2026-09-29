@@ -17,15 +17,20 @@ const InteractiveRoadmap = ({ title, steps }) => {
           </h2>
         )}
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+        {/* 1 kolumn på mobil, 2 på små skärmar (sm), 3 på tablet (md) och 5 på desktop (lg) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
           {steps &&
             steps.map((step, index) => (
               <button
                 key={index}
                 type="button"
                 onClick={() => setSelectedStep(step)}
-                className="bg-[#dca4a4] hover:bg-[#c98e8e] cursor-pointer transition-colors duration-200 rounded-md py-4 px-3 md:py-6 md:px-4 flex justify-center items-center text-kompass-black font-medium text-center text-xs sm:text-sm md:text-base min-w-0 leading-snug [overflow-wrap:anywhere] [word-break:break-word] hyphens-auto"
-                style={{ boxShadow: "4px 4px 0px rgba(43, 43, 43, 0.15)" }}
+                className="w-full bg-[#dca4a4] hover:bg-[#c98e8e] cursor-pointer transition-colors duration-200 rounded-md py-4 px-4 md:py-6 flex justify-center items-center text-kompass-black font-medium text-center text-sm md:text-base min-w-0 leading-snug [overflow-wrap:anywhere] [word-break:break-word] hyphens-auto"
+                style={{
+                  boxShadow: "4px 4px 0px rgba(43, 43, 43, 0.15)",
+                  overflowWrap: "anywhere",
+                  wordBreak: "break-word",
+                }}
               >
                 {step.stepTitle}
               </button>
@@ -52,7 +57,10 @@ const InteractiveRoadmap = ({ title, steps }) => {
               &times;
             </button>
 
-            <h3 className="text-2xl font-bold mb-4 pr-8 text-kompass-black [overflow-wrap:anywhere] [word-break:break-word] hyphens-auto">
+            <h3
+              className="text-2xl font-bold mb-4 pr-8 text-kompass-black [overflow-wrap:anywhere] [word-break:break-word] hyphens-auto"
+              style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
+            >
               {selectedStep.stepTitle}
             </h3>
 
