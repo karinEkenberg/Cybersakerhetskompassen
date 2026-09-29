@@ -21,20 +21,28 @@ const Section = ({
 }) => {
   const HeadingTag = headingLevel;
 
+  const breakClasses =
+    "w-full min-w-0 [overflow-wrap:anywhere] [word-break:break-word] hyphens-auto";
+
   const content = (
     <div
-      className={`max-w-5xl mx-auto bg-[var(--color-offwhite)] rounded-md p-6 md:p-10 lg:p-12 flex flex-col justify-between gap-8 lg:gap-12 w-full ${
+      lang="sv"
+      className={`max-w-5xl mx-auto bg-[var(--color-offwhite)] rounded-md p-6 md:p-10 lg:p-12 flex flex-col justify-between gap-8 lg:gap-12 w-full min-w-0 ${
         isCard ? "lg:items-start" : "lg:items-center"
       } ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"}`}
       style={{ boxShadow: "6px 6px 0px rgba(43, 43, 43, 0.2)" }}
     >
-      <div className="w-full flex flex-col items-start">
+      <div className="w-full min-w-0 flex flex-col items-start">
         {title && (
-          <HeadingTag className="mb-6 text-kompass-black">{title}</HeadingTag>
+          <HeadingTag
+            className={`mb-6 text-kompass-black font-bold text-xl md:text-2xl ${breakClasses}`}
+          >
+            {title}
+          </HeadingTag>
         )}
 
         {text && (
-          <div className="mb-6 w-full text-gray-800">
+          <div className={`mb-6 w-full text-gray-800 ${breakClasses}`}>
             {typeof text === "string" ? (
               <p className="leading-relaxed">{text}</p>
             ) : (
@@ -42,10 +50,47 @@ const Section = ({
                 value={text}
                 components={{
                   block: {
+                    h1: ({ children }) => (
+                      <h1
+                        className={`text-2xl md:text-3xl font-bold mt-6 mb-2 text-kompass-black ${breakClasses}`}
+                      >
+                        {children}
+                      </h1>
+                    ),
+                    h2: ({ children }) => (
+                      <h2
+                        className={`text-xl md:text-2xl font-bold mt-6 mb-2 text-kompass-black ${breakClasses}`}
+                      >
+                        {children}
+                      </h2>
+                    ),
                     h3: ({ children }) => (
-                      <h3 className="text-xl font-bold mt-6 mb-2 text-kompass-black">
+                      <h3
+                        className={`text-lg md:text-xl font-bold mt-6 mb-2 text-kompass-black ${breakClasses}`}
+                      >
                         {children}
                       </h3>
+                    ),
+                    h4: ({ children }) => (
+                      <h4
+                        className={`text-base md:text-lg font-bold mt-4 mb-2 text-kompass-black ${breakClasses}`}
+                      >
+                        {children}
+                      </h4>
+                    ),
+                    h5: ({ children }) => (
+                      <h5
+                        className={`text-sm md:text-base font-bold mt-4 mb-2 text-kompass-black ${breakClasses}`}
+                      >
+                        {children}
+                      </h5>
+                    ),
+                    h6: ({ children }) => (
+                      <h6
+                        className={`text-xs md:text-sm font-bold mt-4 mb-2 text-kompass-black ${breakClasses}`}
+                      >
+                        {children}
+                      </h6>
                     ),
                     normal: ({ children }) => (
                       <p className="leading-relaxed mb-4">{children}</p>

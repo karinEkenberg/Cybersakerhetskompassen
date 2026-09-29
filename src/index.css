@@ -44,6 +44,9 @@
   h5,
   h6 {
     font-family: var(--font-fraunces);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    hyphens: auto;
   }
 }
 
