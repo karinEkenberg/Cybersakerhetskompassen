@@ -19,16 +19,10 @@ const Matching = () => {
       .catch(console.error);
   }, []);
 
-  const availableTraits = [
-    "Programmering",
-    "Utredning",
-    "Problemlösning",
-    "Logganalys",
-    "Strukturerad",
-    "Kreativ",
-    "Webbutveckling",
-    "Nätverk",
-  ];
+  // Dynamically extract and sort unique traits from Sanity documents
+  const availableTraits = Array.from(
+    new Set(roles?.flatMap((role) => role.traits || []) || []),
+  ).sort((a, b) => a.localeCompare("sv"));
 
   const handleTraitClick = (trait) => {
     setSelectedTraits((prev) =>
@@ -59,21 +53,30 @@ const Matching = () => {
       <div className="w-full px-6 pb-12 lg:pb-12">
         <div className="max-w-5xl mx-auto">
           <div className="mb-12 bg-[var(--color-offwhite)] p-8 rounded-md shadow-[4px_4px_0px_rgba(43,43,43,0.15)]">
-            <div className="mb-6 border-b border-gray-300 pb-4">
+            <div className="mb-6 border-b border-gray-300 pb-4 flex justify-between items-center flex-wrap gap-2">
               <h2 className="text-2xl font-bold text-[var(--color-kompass-black)]">
                 Välj dina egenskaper
               </h2>
+              {selectedTraits.length > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setSelectedTraits([])}
+                  className="text-sm underline text-gray-600 hover:text-black cursor-pointer"
+                >
+                  Rensa val ({selectedTraits.length})
+                </button>
+              )}
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3">
               {availableTraits.map((trait) => (
                 <button
                   key={trait}
                   onClick={() => handleTraitClick(trait)}
-                  className={`px-4 py-2 rounded-md font-medium transition-colors border-2 ${
+                  className={`px-4 py-2 rounded-md font-medium transition-colors border-2 cursor-pointer ${
                     selectedTraits.includes(trait)
-                      ? "bg-[#dca4a4] text-[var(--color-kompass-black)]"
-                      : "bg-transparent border-[var(--color-primary-hover)] text-gray-700 hover:border-[#dca4a4]"
+                      ? "bg-[#dca4a4] border-[#c98e8e] text-[var(--color-kompass-black)] shadow-[2px_2px_0px_rgba(43,43,43,0.15)]"
+                      : "bg-transparent border-gray-300 text-gray-700 hover:border-[#dca4a4]"
                   }`}
                 >
                   {trait}
@@ -94,17 +97,33 @@ const Matching = () => {
               {filteredRoles?.map((role) => (
                 <article
                   key={role._id}
-                  className="bg-[var(--color-offwhite)] p-8 rounded-md shadow-[4px_4px_0px_rgba(43,43,43,0.15)] flex flex-col"
+                  className="bg-[var(--color-offwhite)] p-8 rounded-md shadow-[4px_4px_0px_rgba(43,43,43,0.15)] flex flex-col justify-between"
                 >
-                  <h3 className="text-2xl font-bold mb-4 text-[var(--color-kompass-black)]">
-                    {role.roleTitle}
-                  </h3>
-                  <p className="text-gray-800 leading-relaxed mb-6 flex-grow">
-                    {role.description}
-                  </p>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4 text-[var(--color-kompass-black)] [overflow-wrap:anywhere] [word-break:break-word]">
+                      {role.roleTitle}
+                    </h3>
+                    <p className="text-gray-800 leading-relaxed mb-6">
+                      {role.description}
+                    </p>
+
+                    {/* Renders skills/traits as tags */}
+                    {role.traits && role.traits.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {role.traits.map((trait) => (
+                          <span
+                            key={trait}
+                            className="text-xs bg-[#c0e1d2]/40 text-gray-800 border border-[#c0e1d2] px-2.5 py-1 rounded-md font-medium"
+                          >
+                            {trait}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
 
                   {role.interviewTip && (
-                    <div className="bg-[#c0e1d2]/30 p-4 rounded-md border-l-4 border-[#c0e1d2]">
+                    <div className="bg-[#c0e1d2]/30 p-4 rounded-md border-l-4 border-[#c0e1d2] mt-auto">
                       <h4 className="font-bold text-[var(--color-kompass-black)] mb-2">
                         Intervjutips
                       </h4>
